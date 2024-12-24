@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Custom Properties */
+:root {
+    --color-royal-blue: #1e3a8a;
+    --color-dark-blue: #1d2d6c;
+    --color-lightest-blue: #f0f9ff;
+    --color-green: #34d399;
+    --color-dark-green: #064e3b;
+  }
+  
+  /* Custom Styles */
+  .login-page {
+    max-width: 400px;
+    margin: auto;
+    padding: 2em;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: var(--color-royal-blue);
+  }
+  
+  button {
+    font-size: 1rem;
+  }
+  
+  input {
+    font-size: 1rem;
+  }
+  select {
+    cursor: pointer;
+  }
+  input:focus {
+    border-color: var(--color-royal-blue);
+  }
+  
+  .error {
+    color: #f44336; /* Red color for error */
+  }
+  
+  /* Form and Input Styles */
+  form {
+    @apply bg-lightest-blue p-6 rounded-lg shadow-blue-glow;
+  }
+  
+  input {
+    @apply w-full px-4 py-2 border-2 border-gray-300 rounded-md focus:outline-none focus:border-royal-blue transition-all;
+  }
+  
+  button {
+    @apply w-full py-2 bg-blue text-white rounded-md hover:bg-dark-blue focus:outline-none transition-all;
+  }
+  
+  /* Error Text */
+  .error {
+    @apply mt-4 text-red-600;
+  }

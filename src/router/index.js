@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import LoginPage from '../views/LoginPage.vue';
 import HomePage from '../views/HomePage.vue';
-import DashboardPage from '../views/DashboardPage.vue';
+import RequestDashboardPage from '../views/RequestDashboardPage.vue';
+import MachineLearningPage from '../views/MachineLearningPage.vue';
 
 const routes = [
   {
@@ -15,9 +16,15 @@ const routes = [
     component: LoginPage,
   },
   {
-    path: '/dashboard',
-    name: 'Dashboard',
-    component: DashboardPage,
+    path: '/req-dashboard',
+    name: 'RequestDashboard',
+    component: RequestDashboardPage,
+    meta: { requiresAuth: true }, // Protect this route
+  },
+  {
+    path: '/ml',
+    name: 'MachineLearning',
+    component: MachineLearningPage,
     meta: { requiresAuth: true }, // Protect this route
   },
 ];
